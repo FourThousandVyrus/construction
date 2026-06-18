@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none">
+  <rect width="600" height="400" fill="#e2e8f0"/>
+  <rect x="50" y="300" width="500" height="60" fill="#cbd5e1"/>
+  <rect x="80" y="200" width="150" height="100" fill="#94a3b8"/>
+  <rect x="260" y="150" width="220" height="150" fill="#64748b"/>
+  <rect x="520" y="220" width="60" height="80" fill="#94a3b8"/>
+  <rect x="120" y="310" width="90" height="30" fill="#f97316" opacity="0.8"/>
+  <rect x="300" y="260" width="100" height="70" fill="#f97316" opacity="0.6"/>
+  <rect x="450" y="310" width="60" height="30" fill="#f97316" opacity="0.7"/>
+  <text x="300" y="380" font-family="system-ui" font-size="14" fill="#475569" text-anchor="middle">Residential Development</text>
+</svg>

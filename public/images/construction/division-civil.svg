@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" fill="none">
+  <rect width="300" height="300" fill="#f8fafc"/>
+  <rect x="30" y="100" width="240" height="120" fill="none" stroke="#f97316" stroke-width="3" rx="8"/>
+  <polygon points="150,50 250,100 250,200 150,250 50,200 50,100" fill="none" stroke="#f97316" stroke-width="2"/>
+  <line x1="150" y1="50" x2="150" y2="250" stroke="#f97316" stroke-width="1" stroke-dasharray="6 4"/>
+  <line x1="50" y1="100" x2="250" y2="200" stroke="#f97316" stroke-width="1" stroke-dasharray="6 4"/>
+  <line x1="50" y1="200" x2="250" y2="100" stroke="#f97316" stroke-width="1" stroke-dasharray="6 4"/>
+  <text x="150" y="260" font-family="system-ui" font-size="14" fill="#0f172a" text-anchor="middle">Civil & Infrastructure</text>
+</svg>

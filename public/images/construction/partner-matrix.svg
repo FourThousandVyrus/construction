@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" fill="none">
+  <rect width="200" height="100" fill="#ffffff" rx="12"/>
+  <rect x="10" y="10" width="180" height="80" fill="none" stroke="#f97316" stroke-width="1.5" rx="8"/>
+  <text x="100" y="48" font-family="system-ui" font-size="14" font-weight="bold" fill="#0f172a" text-anchor="middle">MATRIX</text>
+  <text x="100" y="70" font-family="system-ui" font-size="10" fill="#64748b" text-anchor="middle">Engineering Solutions</text>
+</svg>

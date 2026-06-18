@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" fill="none">
+  <rect width="600" height="500" fill="#0f172a"/>
+  <rect x="20" y="20" width="560" height="460" fill="none" stroke="#f97316" stroke-width="2" rx="8"/>
+  <line x1="40" y1="60" x2="560" y2="60" stroke="#f97316" stroke-width="1" stroke-dasharray="8 4"/>
+  <line x1="40" y1="440" x2="560" y2="440" stroke="#f97316" stroke-width="1" stroke-dasharray="8 4"/>
+  <line x1="40" y1="60" x2="40" y2="440" stroke="#f97316" stroke-width="1" stroke-dasharray="8 4"/>
+  <line x1="560" y1="60" x2="560" y2="440" stroke="#f97316" stroke-width="1" stroke-dasharray="8 4"/>
+  <rect x="80" y="100" width="120" height="80" fill="none" stroke="#f97316" stroke-width="1.5" rx="4"/>
+  <rect x="220" y="100" width="140" height="80" fill="none" stroke="#f97316" stroke-width="1.5" rx="4"/>
+  <rect x="380" y="100" width="140" height="80" fill="none" stroke="#f97316" stroke-width="1.5" rx="4"/>
+  <rect x="80" y="200" width="120" height="100" fill="none" stroke="#f97316" stroke-width="1.5" rx="4"/>
+  <rect x="220" y="200" width="140" height="100" fill="none" stroke="#f97316" stroke-width="1.5" rx="4"/>
+  <rect x="380" y="200" width="140" height="100" fill="none" stroke="#f97316" stroke-width="1.5" rx="4"/>
+  <rect x="80" y="320" width="280" height="100" fill="none" stroke="#f97316" stroke-width="1.5" rx="4"/>
+  <rect x="380" y="320" width="140" height="100" fill="none" stroke="#f97316" stroke-width="1.5" rx="4"/>
+  <text x="300" y="260" font-family="system-ui" font-size="14" fill="#f97316" text-anchor="middle" opacity="0.6">FLOOR PLAN</text>
+  <text x="300" y="380" font-family="system-ui" font-size="14" fill="#f97316" text-anchor="middle" opacity="0.6">SECTION A-A</text>
+  <text x="450" y="380" font-family="system-ui" font-size="14" fill="#f97316" text-anchor="middle" opacity="0.6">DETAIL</text>
+  <circle cx="100" cy="140" r="4" fill="#f97316"/>
+  <circle cx="240" cy="140" r="4" fill="#f97316"/>
+  <circle cx="400" cy="140" r="4" fill="#f97316"/>
+  <circle cx="100" cy="250" r="4" fill="#f97316"/>
+  <circle cx="240" cy="250" r="4" fill="#f97316"/>
+  <circle cx="400" cy="250" r="4" fill="#f97316"/>
+  <text x="300" y="470" font-family="system-ui" font-size="12" fill="#64748b" text-anchor="middle">Epicshield Surfaces — Technical Drawings</text>
+</svg>
