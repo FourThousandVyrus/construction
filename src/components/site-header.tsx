@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Phone, ChevronDown, Menu, X } from "lucide-react";
+import { Phone, ChevronDown, Menu, X, Home, Info, Wrench, Briefcase, Globe, Mail, Image as ImageIcon } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { navItems, servicesData } from "@/lib/site-content";
 import { company, contact } from "@/lib/brochure-content";
@@ -35,6 +35,16 @@ export function SiteHeader() {
   const closeMenu = () => {
     setMenuOpen(false);
     setServicesOpen(false);
+  };
+
+  const navIcons: Record<string, React.ReactNode> = {
+    Home: <Home className="h-4 w-4" />,
+    About: <Info className="h-4 w-4" />,
+    Services: <Wrench className="h-4 w-4" />,
+    Projects: <Briefcase className="h-4 w-4" />,
+    Gallery: <ImageIcon className="h-4 w-4" />,
+    Global: <Globe className="h-4 w-4" />,
+    Contact: <Mail className="h-4 w-4" />,
   };
 
   return (
@@ -119,18 +129,19 @@ export function SiteHeader() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 28, stiffness: 300 }}
-              className="fixed top-0 right-0 z-50 flex h-full w-full max-w-sm flex-col bg-[var(--ink-deep)] md:hidden overflow-y-auto"
+              className="fixed top-0 right-0 z-50 flex h-full w-[280px] flex-col bg-[var(--ink-deep)] md:hidden overflow-y-auto shadow-2xl"
             >
               <div className="blueprint-grid pointer-events-none absolute inset-0 opacity-[0.04]" />
-              <div className="relative z-10 flex h-full flex-col p-6">
-                <div className="mb-10 flex items-center justify-between">
-                  <span className="font-serif text-xl font-bold text-white">Menu</span>
+              <div className="absolute -left-32 top-20 h-64 w-64 rounded-full bg-[var(--accent)]/8 blur-[100px] pointer-events-none" />
+              <div className="relative z-10 flex h-full flex-col px-5 pb-8 pt-5">
+                <div className="flex items-center justify-between mb-10">
+                  <Image src="/epic-logo.png" alt={company.name} width={100} height={34} className="h-7 w-auto brightness-0 invert opacity-60" />
                   <button
                     onClick={closeMenu}
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white"
+                    className="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 text-white/40 transition-colors hover:border-white/20 hover:text-white"
                     aria-label="Close menu"
                   >
-                    <X className="h-5 w-5" />
+                    <X className="h-3.5 w-3.5" />
                   </button>
                 </div>
 
@@ -140,11 +151,16 @@ export function SiteHeader() {
                       <div key={item.href}>
                         <button
                           onClick={() => setServicesOpen(!servicesOpen)}
-                          className="flex w-full items-center justify-between py-4 text-sm font-bold uppercase tracking-[0.2em] text-white transition-colors hover:text-[var(--accent)]"
+                          className={`flex w-full items-center gap-3 rounded-xl px-4 py-3.5 text-sm font-bold uppercase tracking-[0.2em] transition-all ${
+                            pathname.startsWith("/services")
+                              ? "bg-white/5 text-[var(--accent)]"
+                              : "text-white/70 hover:bg-white/5 hover:text-white"
+                          }`}
                         >
-                          {item.label}
+                          <span className="opacity-60">{navIcons[item.label]}</span>
+                          <span className="flex-1 text-left">{item.label}</span>
                           <ChevronDown
-                            className={`h-4 w-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`}
+                            className={`h-3.5 w-3.5 transition-transform opacity-60 ${servicesOpen ? "rotate-180" : ""}`}
                           />
                         </button>
                         <AnimatePresence>
@@ -156,16 +172,16 @@ export function SiteHeader() {
                               transition={{ duration: 0.2 }}
                               className="overflow-hidden"
                             >
-                              <div className="ml-2 flex flex-col gap-1 border-l border-white/10 pb-3 pl-4">
+                              <div className="ml-4 flex flex-col gap-0.5 border-l border-white/5 pb-2 pl-4 pt-1">
                                 {servicesData.map((s) => (
                                   <Link
                                     key={s.id}
                                     href={s.href}
                                     onClick={closeMenu}
-                                    className={`py-3 text-sm transition-colors ${
+                                    className={`rounded-lg px-3 py-2.5 text-sm transition-colors ${
                                       pathname === s.href
                                         ? "font-semibold text-[var(--accent)]"
-                                        : "text-white/60 hover:text-white"
+                                        : "text-white/50 hover:text-white"
                                     }`}
                                   >
                                     {s.title}
@@ -174,9 +190,9 @@ export function SiteHeader() {
                                 <Link
                                   href="/services"
                                   onClick={closeMenu}
-                                  className="mt-2 text-xs font-bold uppercase tracking-widest text-[var(--accent)]"
+                                  className="mt-1 rounded-lg px-3 py-2 text-xs font-bold uppercase tracking-widest text-[var(--accent)]"
                                 >
-                                  View All Services →
+                                  View All →
                                 </Link>
                               </div>
                             </motion.div>
@@ -188,27 +204,28 @@ export function SiteHeader() {
                         key={item.href}
                         href={item.href}
                         onClick={closeMenu}
-                        className={`py-4 text-sm font-bold uppercase tracking-[0.2em] transition-colors ${
+                        className={`flex items-center gap-3 rounded-xl px-4 py-3.5 text-sm font-bold uppercase tracking-[0.2em] transition-all ${
                           pathname === item.href
-                            ? "text-[var(--accent)]"
-                            : "text-white hover:text-[var(--accent)]"
+                            ? "bg-white/5 text-[var(--accent)]"
+                            : "text-white/70 hover:bg-white/5 hover:text-white"
                         }`}
                       >
+                        <span className="opacity-60">{navIcons[item.label]}</span>
                         {item.label}
                       </Link>
                     )
                   )}
                 </nav>
 
-                <div className="mt-auto border-t border-white/10 pt-8">
+                <div className="mt-auto pt-6">
                   <a
                     href={`tel:${contact.phone.replace(/\s/g, "")}`}
-                    className="flex w-full items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-6 py-4 font-bold text-white transition-all hover:bg-white hover:text-[var(--ink-deep)]"
+                    className="flex w-full items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-5 py-3.5 text-sm font-bold text-white transition-all hover:bg-white hover:text-[var(--ink-deep)]"
                   >
                     <Phone className="h-4 w-4" />
                     {contact.phone}
                   </a>
-                  <p className="mt-4 text-center text-xs text-white/30">
+                  <p className="mt-3 text-center text-xs text-white/25">
                     {contact.email}
                   </p>
                 </div>
