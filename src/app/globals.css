@@ -378,21 +378,6 @@ a {
   }
 }
 
-.section-index {
-  position: absolute;
-  top: -0.3em;
-  right: -0.05em;
-  font-family: var(--font-cormorant), serif;
-  font-size: clamp(8rem, 22vw, 18rem);
-  line-height: 1;
-  font-weight: 700;
-  color: var(--primary);
-  opacity: 0.05;
-  pointer-events: none;
-  z-index: -1;
-  user-select: none;
-}
-
 @keyframes blueprint-drift {
   0% {
     background-position: 0 0;

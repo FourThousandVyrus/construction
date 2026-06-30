@@ -21,9 +21,9 @@ export default function DivisionsPage() {
 
         <div className="relative z-10 max-w-3xl">
           <p className="section-label eyebrow-line text-[var(--accent)]">Engineering Divisions</p>
-          <KineticHeading as="h1" className="mt-4 font-serif text-4xl sm:text-7xl" lines={[["Specialized"], ["Construction Divisions."]]} />
+          <KineticHeading as="h1" className="mt-4 font-serif text-4xl sm:text-7xl" lines={[["Healthcare"], ["Infrastructure Divisions."]]} />
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
-            Precision-engineered divisions — from foundations to finishing, built for the most demanding infrastructure projects across Africa.
+            Precision-engineered divisions — from turnkey hospital construction to medical gas piping and lead-shielded doors, built for high-performance clinical environments.
           </p>
         </div>
       </section>
@@ -70,7 +70,6 @@ export default function DivisionsPage() {
       {/* CTA */}
       
       <section className="mt-12 rounded-[2.5rem] bg-[var(--ink-deep)] p-8 text-center text-white sm:p-12 relative">
-        <span className="section-index" aria-hidden="true" style={{ color: "var(--accent)", opacity: 0.04 }}>01</span>
         <KineticHeading as="h2" className="mx-auto max-w-2xl font-serif text-3xl sm:text-5xl" text="Ready to build?" />
         <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
            <Link href="/contact" className="rounded-full bg-[var(--accent)] px-10 py-4 font-bold text-white transition-transform hover:scale-105">

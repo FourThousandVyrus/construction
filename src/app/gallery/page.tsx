@@ -8,7 +8,7 @@ import { MagneticTiltCard } from "@/components/magnetic-tilt-card";
 
 import { galleryImages } from "@/lib/site-content";
 
-const categories = ["All", "Construction", "Progress", "Site", "Infrastructure", "MEP", "Management"];
+const categories = ["All", "Hospital Construction", "Healthcare Engineering", "Medical Equipment", "Hospital Doors & Windows", "Study Tours & Visits"];
 
 export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -24,9 +24,9 @@ export default function GalleryPage() {
         <div className="blueprint-grid blueprint-grid-live absolute inset-0 opacity-10 pointer-events-none" />
         <div className="relative z-10 max-w-3xl">
           <p className="section-label eyebrow-line text-[var(--accent)]">Project Gallery</p>
-          <KineticHeading as="h1" className="mt-4 font-serif text-4xl sm:text-7xl" lines={[["Construction"], ["in Progress."]]} />
+          <KineticHeading as="h1" className="mt-4 font-serif text-4xl sm:text-7xl" lines={[["Clinical"], ["Infrastructure."]]} />
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
-            A visual record of our projects — from ground-breaking to handover. Every image tells a story of precision, grit, and delivery.
+            A visual record of our healthcare facility developments — from cleanrooms and theatres to medical gas networks and study tours. Every image highlights our clinical engineering precision.
           </p>
         </div>
       </section>

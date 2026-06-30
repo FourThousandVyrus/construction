@@ -13,22 +13,15 @@ import { MarqueeTicker } from "@/components/marquee-ticker";
 import { profile, services, caseStudy, team, company } from "@/lib/brochure-content";
 import { liveSiteImages } from "@/lib/site-content";
 
-const quickStats = [
-  { value: "47+", label: "Projects Delivered" },
-  { value: "18", label: "Countries Reached" },
-  { value: "250+", label: "Structures Completed" },
-  { value: "99.7%", label: "Structural Rating" },
-  { value: "10+", label: "Years Experience" },
-  { value: "5", label: "African Markets" },
-];
+
 
 const serviceIcons = [ShieldCheck, Activity, Scan, Building2];
 
 const highlights = [
-  { icon: ShieldCheck, label: "ISO-Certified", desc: "International safety & quality standards" },
-  { icon: Users, label: "50+ Specialists", desc: "Architects, engineers & project managers" },
-  { icon: MapPin, label: "Pan-African Reach", desc: "Active in 18 countries across Africa" },
-  { icon: Building2, label: "Structures Delivered", desc: "250+ projects across Africa" },
+  { icon: ShieldCheck, label: "MOH-Compliant", desc: "International clinical safety & quality standards" },
+  { icon: Users, label: "Clinical Advisory", desc: "Physician & nursing workflow integrated design" },
+  { icon: MapPin, label: "Pan-African Vision", desc: "Expanding to 5 additional countries by 2030" },
+  { icon: Building2, label: "Specialized Builds", desc: "Cleanrooms, medical gas & lead-lined rooms" },
 ];
 
 export default function Home() {
@@ -60,21 +53,21 @@ export default function Home() {
           <div className="max-w-4xl">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-4 py-2 text-[11px] font-bold uppercase tracking-widest text-[var(--accent)] backdrop-blur-md mb-6">
               <div className="h-1.5 w-1.5 rounded-full bg-[var(--accent)] animate-pulse" />
-              Ghana&apos;s Premier Construction Company
+              Ghana&apos;s Premier Healthcare Construction Specialists
             </div>
 
             <KineticHeading
               as="h1"
               className="font-serif text-[3rem] leading-[1.05] text-white sm:text-[5rem] lg:text-[6.5rem]"
               lines={[
-                ["Creating Space"],
-                [{ key: "accent", node: <span className="text-[var(--accent)] italic">Building Legacy.</span> }],
+                ["Creating Spaces"],
+                [{ key: "accent", node: <span className="text-[var(--accent)] italic">To Save Lives.</span> }],
               ]}
             />
 
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/60 sm:text-xl">
-              We design, construct, and deliver world-class infrastructure across Africa —
-              precision-engineering facilities that meet international standards.
+              We design, construct, and equip world-class, patient-focused private hospitals 
+              and healthcare facilities across Ghana and Africa.
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -94,22 +87,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-12 grid gap-3 sm:grid-cols-3 lg:grid-cols-6">
-            {quickStats.map((stat, i) => (
-              <div
-                key={stat.label}
-                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur-md transition-all duration-500 hover:-translate-y-1 hover:border-white/20 hover:bg-white/10 hover:shadow-lg hover:shadow-[var(--accent)]/10"
-                style={{ animationDelay: `${i * 100}ms` }}
-              >
-                <div className="absolute -right-4 -top-4 h-12 w-12 rounded-full bg-[var(--accent)]/0 transition-all duration-500 group-hover:bg-[var(--accent)]/10 group-hover:blur-xl" />
-                <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-[var(--accent)] transition-all duration-500 group-hover:w-full" />
-                <p className="font-serif text-2xl text-white sm:text-3xl relative">
-                  <Odometer value={stat.value} />
-                </p>
-                <p className="mt-1 text-[10px] uppercase tracking-[0.15em] text-white/40 relative">{stat.label}</p>
-              </div>
-            ))}
-          </div>
+
         </div>
 
         {/* Scroll indicator */}
@@ -138,7 +116,6 @@ export default function Home() {
 
       {/* ── About Preview ── */}
       <section className="mt-10 relative">
-        <span className="section-index" aria-hidden="true">01</span>
         <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div>
             <p className="section-label eyebrow-line text-[var(--accent)]">Who We Are</p>
@@ -176,7 +153,6 @@ export default function Home() {
 
       {/* ── Services Grid ── */}
       <section className="mt-10 relative">
-        <span className="section-index" aria-hidden="true">02</span>
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
             <p className="section-label eyebrow-line text-[var(--accent)]">Our Expertise</p>
@@ -208,7 +184,6 @@ export default function Home() {
 
       {/* ── Live Site Feed ── */}
       <section className="relative overflow-hidden py-10">
-        <span className="section-index" aria-hidden="true">03</span>
         <div className="px-3 sm:px-5 lg:px-8 w-full">
           <LiveSiteFeed images={liveSiteImages as unknown as string[]} />
         </div>
@@ -217,7 +192,6 @@ export default function Home() {
       {/* ── Certifications & Compliance ── */}
       <section className="relative overflow-hidden py-12">
         <ScanlineSweep>
-        <span className="section-index" aria-hidden="true">04</span>
         <div className="absolute inset-0 bg-[var(--background)]" />
         <div className="absolute inset-0 opacity-[0.02] pointer-events-none"
           style={{ backgroundImage: "linear-gradient(rgba(15,23,42,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(15,23,42,0.04) 1px, transparent 1px)", backgroundSize: "60px 60px" }} />
@@ -301,6 +275,32 @@ export default function Home() {
           />
         </div>
 
+        <div className="mt-20 text-center">
+          <p className="font-serif text-2xl sm:text-3xl font-bold text-[var(--ink-deep)]">
+            Epicshield Surfaces <span className="text-[var(--accent)]">Adheres To</span>
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-3 px-3">
+            {[
+              "Local & International Construction Standards",
+              "Project Management Institute (PMI) Standards",
+              "ISO Guidelines for Quality & Safety",
+              "Health Facility & Regulatory Agency Requirements",
+              "Healthcare Construction, Design & Renovation",
+              "AIA Academy of Architecture for Health",
+              "International Health & Safety Standards for Medical Facilities",
+              "Nuclear Regulatory Authority",
+              "Environmental Protection Agency & National Fire Service Regulations",
+            ].map((standard) => (
+              <span
+                key={standard}
+                className="rounded-full border border-[var(--line)] bg-white px-5 py-2.5 text-sm font-medium text-[var(--ink-deep)] shadow-xs transition-all hover:border-[var(--accent)]/30 hover:shadow-sm"
+              >
+                {standard}
+              </span>
+            ))}
+          </div>
+        </div>
+
       </ScanlineSweep>
       </section>
 
@@ -331,7 +331,6 @@ export default function Home() {
 
       {/* ── Featured Case Study ── */}
       <section className="relative">
-        <span className="section-index" aria-hidden="true">05</span>
         <div className="panel-ivory relative overflow-hidden rounded-[3rem] p-8 sm:p-16">
           <div className="blueprint-grid absolute inset-0 opacity-[0.04] pointer-events-none" style={{ filter: "invert(1)" }} />
           <div className="relative z-10">
@@ -365,7 +364,6 @@ export default function Home() {
 
       {/* ── Team Preview ── */}
       <section className="mt-12 relative">
-        <span className="section-index" aria-hidden="true">06</span>
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
             <p className="section-label eyebrow-line text-[var(--accent)]">Leadership</p>

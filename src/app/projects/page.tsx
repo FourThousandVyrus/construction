@@ -21,9 +21,9 @@ export default function ProjectsPage() {
 
          <div className="relative z-10 max-w-3xl">
            <p className="section-label eyebrow-line text-[var(--accent)]">Portfolio of Excellence</p>
-           <KineticHeading as="h1" className="mt-4 font-serif text-4xl sm:text-7xl" lines={[["Construction"], ["Case Studies."]]} />
+           <KineticHeading as="h1" className="mt-4 font-serif text-4xl sm:text-7xl" lines={[["Hospital"], ["Case Studies."]]} />
            <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
-             A look into our most complex engineering challenges and the world-class infrastructure we&#39;ve delivered across the continent.
+             A look into our most complex healthcare facility developments and the world-class clinical infrastructure we have built.
            </p>
          </div>
       </section>
@@ -117,7 +117,6 @@ export default function ProjectsPage() {
       {/* ── Featured Case Study ── */}
       
       <section className="mt-20 relative">
-        <span className="section-index" aria-hidden="true">01</span>
         <div className="panel-dark relative overflow-hidden rounded-[3rem] p-8 sm:p-16 text-white">
           <div className="blueprint-grid blueprint-grid-live absolute inset-0 opacity-10 pointer-events-none" />
           <div className="relative z-10">
@@ -154,7 +153,6 @@ export default function ProjectsPage() {
       
       <section className="mt-16 panel-ivory rounded-[3rem] p-8 sm:p-16 relative overflow-hidden">
          <div className="absolute right-0 top-0 h-full w-1/3 bg-[radial-gradient(circle_at_100%_0%,rgba(249,115,22,0.08),transparent_70%)]" />
-         <span className="section-index" aria-hidden="true" style={{ color: "var(--ink-deep)", opacity: 0.04 }}>02</span>
          <div className="relative z-10 grid gap-12 lg:grid-cols-2 lg:items-center">
              <div>
                 <KineticHeading as="h2" className="font-serif text-4xl sm:text-6xl text-[var(--ink-deep)]" text="Have a project vision?" />

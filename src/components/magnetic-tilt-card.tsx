@@ -22,9 +22,11 @@ import {
 export function MagneticTiltCard({
   children,
   className,
+  style,
 }: {
   children: React.ReactNode;
   className?: string;
+  style?: React.CSSProperties;
 }) {
   const reduce = useReducedMotion();
   const ref = useRef<HTMLDivElement>(null);
@@ -64,7 +66,7 @@ export function MagneticTiltCard({
   };
 
   if (reduce) {
-    return <div className={className}>{children}</div>;
+    return <div className={className} style={style}>{children}</div>;
   }
 
   return (
@@ -78,6 +80,7 @@ export function MagneticTiltCard({
         x: translateX,
         y: translateY,
         transformPerspective: 900,
+        ...style,
       }}
       className={`relative ${className ?? ""}`}
     >

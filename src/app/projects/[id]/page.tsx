@@ -54,7 +54,6 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
 
       {/* Technical Overview */}
       <section className="mt-12 grid gap-8 lg:grid-cols-3 relative">
-         <span className="section-index" aria-hidden="true" style={{ color: "var(--ink-deep)", opacity: 0.04 }}>01</span>
          <MagneticTiltCard className="panel-ivory rounded-[2.5rem] p-10">
             <KineticHeading as="h3" className="text-3xl font-serif mb-8 text-[var(--ink-deep)]" text="Core Statistics." />
             <div className="space-y-8">
@@ -79,24 +78,24 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
             </div>
             <KineticHeading as="h3" className="text-3xl font-serif mb-6 text-[var(--ink-deep)]" text="Mission Narrative." />
              <p className="text-lg leading-relaxed text-[var(--muted)]">
-                This project represents a critical milestone in African infrastructure development. By integrating advanced {project.type.toLowerCase()} with precision structural engineering, we delivered a facility that exceeds international standards. The {project.title} serves as a benchmark for future high-performance construction projects in the region.
+                This project represents a critical milestone in private healthcare facility development. By integrating advanced clinical engineering, specialized room zoning (such as cleanrooms and lead shielding), and certified medical gas systems, we delivered a facility that exceeds international clinical and safety standards. The {project.title} serves as a benchmark for high-performance hospital infrastructure.
              </p>
             <div className="mt-10 grid gap-6 sm:grid-cols-2">
                <div className="flex gap-4 items-start">
                   <CheckCircle2 className="h-6 w-6 text-green-500 shrink-0" />
-                  <p className="text-sm font-medium">Full Regulatory Integration</p>
+                  <p className="text-sm font-medium">MOH & GSA Clinical Licensing Compliance</p>
                </div>
                <div className="flex gap-4 items-start">
                   <CheckCircle2 className="h-6 w-6 text-green-500 shrink-0" />
-                  <p className="text-sm font-medium">Sustainable Energy Infrastructure</p>
+                  <p className="text-sm font-medium">Dedicated Medical Gas Networks</p>
                </div>
                 <div className="flex gap-4 items-start">
                    <CheckCircle2 className="h-6 w-6 text-green-500 shrink-0" />
-                   <p className="text-sm font-medium">Advanced Zone Engineering</p>
+                   <p className="text-sm font-medium">Infection Control Zoning & HEPA Filtration</p>
                 </div>
                 <div className="flex gap-4 items-start">
                    <CheckCircle2 className="h-6 w-6 text-green-500 shrink-0" />
-                   <p className="text-sm font-medium">Smart Building Systems</p>
+                   <p className="text-sm font-medium">Lead-Shielded Theatre & Diagnostic Doors</p>
                 </div>
             </div>
          </MagneticTiltCard>
@@ -112,7 +111,6 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
       {/* CTA */}
       <section className="mt-20 rounded-[3rem] bg-[var(--ink-deep)] p-12 text-white text-center relative overflow-hidden">
          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(249,115,22,0.1),transparent_70%)]" />
-         <span className="section-index" aria-hidden="true" style={{ opacity: 0.04, color: "var(--accent)" }}>02</span>
           <KineticHeading as="h2" className="text-3xl sm:text-5xl font-serif mb-8 relative z-10" text="Scale your construction vision." />
           <Link href="/contact" className="inline-flex items-center gap-3 rounded-full bg-[var(--accent)] px-10 py-4 font-bold text-white transition-transform hover:scale-105 relative z-10">
             Start a Similar Project <ArrowRight className="h-5 w-5" />

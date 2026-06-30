@@ -15,9 +15,9 @@ export default function ContactPage() {
         <div className="relative z-10 grid gap-12 lg:grid-cols-2">
           <div>
             <p className="section-label eyebrow-line text-[var(--accent)]">Get in Touch</p>
-            <KineticHeading as="h1" className="mt-4 font-serif text-4xl sm:text-6xl" text="Let's Build Together." />
+            <KineticHeading as="h1" className="mt-4 font-serif text-4xl sm:text-6xl" text="Creating Spaces to Save Lives." />
              <p className="mt-6 text-lg leading-relaxed text-white/60">
-               Ready to start your construction project? Reach out to our team for a consultation.
+               Ready to start your healthcare facility project? Reach out to our clinical engineering team for a consultation.
              </p>
             <div className="mt-10 flex flex-col gap-6">
               <div className="flex items-center gap-4">
@@ -91,24 +91,20 @@ export default function ContactPage() {
               </p>
 
               <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/40">
-                Every great structure begins with a single line. Let us draft yours.
+                Every great medical facility begins with clinical layout planning. Let us build yours.
               </p>
 
-               {/* Stats strip */}
-               <div className="mt-10 flex gap-8 border-t border-white/5 pt-8">
-                 <div>
-                   <p className="font-serif text-3xl text-white">47+</p>
-                   <p className="mt-1 text-[9px] uppercase tracking-[0.2em] text-white/30">Projects</p>
-                 </div>
-                 <div>
-                   <p className="font-serif text-3xl text-white">18</p>
-                   <p className="mt-1 text-[9px] uppercase tracking-[0.2em] text-white/30">Countries</p>
-                 </div>
-                 <div>
-                   <p className="font-serif text-3xl text-white">250+</p>
-                   <p className="mt-1 text-[9px] uppercase tracking-[0.2em] text-white/30">Structures</p>
-                 </div>
-               </div>
+
+            </div>
+
+            <div className="relative z-10 mt-10">
+              <Image
+                src="/images/aboutus.png"
+                alt="About Epicshield"
+                width={2251}
+                height={1207}
+                className="w-full rounded-xl border border-white/10 object-cover"
+              />
             </div>
 
             {/* CTA */}
@@ -133,13 +129,12 @@ export default function ContactPage() {
       {/* ── CSR ── */}
       
       <section className="mt-20 relative">
-        <span className="section-index" aria-hidden="true">01</span>
         <div className="max-w-2xl">
           <p className="section-label eyebrow-line text-[var(--slate-strong)]">Corporate Responsibility</p>
           <KineticHeading as="h2" className="mt-4 font-serif text-4xl sm:text-6xl" text="Building Beyond Bricks." />
         </div>
          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--muted)]">
-           At Epicshield Surfaces, we believe that building infrastructure is only part of our mission. We are equally committed to improving lives and strengthening communities.
+           At Epicshield Infrastructure, we believe that building hospital infrastructure is only part of our mission. We are equally committed to clinical excellence, healthcare access, and saving lives.
          </p>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {csr.map((item) => (
@@ -162,7 +157,7 @@ export default function ContactPage() {
         <div className="relative z-10">
           <KineticHeading as="h2" className="font-serif text-4xl sm:text-6xl text-[var(--ink-deep)]" text="Let's work together." />
            <p className="mt-6 max-w-xl mx-auto text-lg text-[var(--muted)]">
-             Have a project in mind? Reach out and let&apos;s discuss how Epicshield can bring your construction vision to life.
+             Have a project in mind? Reach out and let&apos;s discuss how Epicshield can bring your healthcare facility vision to life.
            </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row justify-center">
             <Link

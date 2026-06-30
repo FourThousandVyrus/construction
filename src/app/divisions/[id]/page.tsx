@@ -36,7 +36,7 @@ export default async function DivisionPage({ params }: { params: Promise<{ id: s
                 lines={[[division.title], [{ key: "solutions", node: <span className="text-[var(--accent)]">Solutions.</span> }]]}
               />
               <p className="mt-8 max-w-xl text-xl leading-relaxed text-white/60">
-                {division.description} Epicshield Surfaces delivers world-class construction and engineering for {division.title} projects.
+                {division.description} Epicshield Infrastructure delivers world-class healthcare infrastructure and turnkey clinical engineering for {division.title} projects.
               </p>
               
               <div className="mt-12 flex flex-col gap-4 sm:flex-row">
@@ -65,21 +65,20 @@ export default async function DivisionPage({ params }: { params: Promise<{ id: s
 
       
       <section className="mt-12 grid gap-8 lg:grid-cols-3 relative">
-         <span className="section-index" aria-hidden="true" style={{ color: "var(--ink-deep)", opacity: 0.04 }}>01</span>
          <MagneticTiltCard className="rounded-[2.5rem] bg-white p-8 border border-gray-50">
             <Activity className="h-10 w-10 text-[var(--accent)] mb-6" />
-            <h3 className="text-2xl font-bold">Advanced Systems</h3>
-            <p className="mt-4 text-[var(--muted)]">Integration of modern engineering systems and precision construction methodologies.</p>
+            <h3 className="text-2xl font-bold">Clinical Workflows</h3>
+            <p className="mt-4 text-[var(--muted)]">Integration of smart clinical systems, sterile isolation environments, and patient-centric room zoning.</p>
          </MagneticTiltCard>
          <MagneticTiltCard className="rounded-[2.5rem] bg-white p-8 border border-gray-50">
             <ShieldCheck className="h-10 w-10 text-[var(--accent)] mb-6" />
-            <h3 className="text-2xl font-bold">Safety Standards</h3>
-            <p className="mt-4 text-[var(--muted)]">Adhering to the highest international protocols for structural integrity and site safety.</p>
+            <h3 className="text-2xl font-bold">Regulatory Compliance</h3>
+            <p className="mt-4 text-[var(--muted)]">Adhering to strict GSA, MOH, and international health facility regulatory licensing guidelines.</p>
          </MagneticTiltCard>
          <MagneticTiltCard className="rounded-[2.5rem] bg-white p-8 border border-gray-50">
             <Zap className="h-10 w-10 text-[var(--accent)] mb-6" />
-            <h3 className="text-2xl font-bold">Rapid Delivery</h3>
-            <p className="mt-4 text-[var(--muted)]">Efficiency-first project management designed to accelerate timelines without compromise.</p>
+            <h3 className="text-2xl font-bold">Clinical Commissioning</h3>
+            <p className="mt-4 text-[var(--muted)]">Rapid verification and certification of medical equipment and gas lines for immediate clinical readiness.</p>
          </MagneticTiltCard>
       </section>
       

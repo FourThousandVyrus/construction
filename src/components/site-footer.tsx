@@ -16,7 +16,7 @@ export function SiteFooter() {
             </Link>
             <p className="mt-6 font-serif text-xl italic text-[var(--accent)]">&ldquo;{company.tagline}&rdquo;</p>
              <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/50">
-               We design, construct, and deliver world-class infrastructure projects with precision engineering and code-compliant construction solutions.
+               We design, construct, and deliver world-class healthcare facility infrastructure with precision clinical engineering and MOH-compliant building solutions.
              </p>
           </div>
 

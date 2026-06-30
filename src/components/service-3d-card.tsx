@@ -61,7 +61,7 @@ export function Service3DCard({
         rotateX,
         transformStyle: "preserve-3d",
       }}
-      className="group relative flex h-[400px] flex-col justify-end overflow-hidden rounded-[2rem] border border-[rgba(16,39,43,0.08)] bg-white/72 p-6 transition-all duration-300 hover:bg-white/80 hover:shadow-2xl"
+      className="group relative flex h-[400px] flex-col justify-end overflow-hidden rounded-[2.5rem] border border-[rgba(16,39,43,0.08)] bg-white/72 p-6 transition-all duration-300 hover:bg-white/80 hover:shadow-2xl"
     >
       <div className="absolute inset-0 z-0">
         {mounted && (

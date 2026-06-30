@@ -3,8 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Phone } from "lucide-react";
-import { navItems } from "@/lib/site-content";
+import { Phone, ChevronDown } from "lucide-react";
+import { navItems, servicesData } from "@/lib/site-content";
 import { company, contact } from "@/lib/brochure-content";
 
 function NavLink({ href, label, active }: { href: string; label: string; active: boolean }) {
@@ -36,9 +36,43 @@ export function SiteHeader() {
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
-          {navItems.map((item) => (
-            <NavLink key={item.href} href={item.href} label={item.label} active={pathname === item.href} />
-          ))}
+          {navItems.map((item) =>
+            item.label === "Services" ? (
+              <div key={item.href} className="relative group">
+                <Link
+                  href={item.href}
+                  className={`relative flex items-center gap-1 text-[11px] font-bold uppercase tracking-[0.2em] transition-colors ${
+                    pathname.startsWith("/services")
+                      ? "text-[var(--ink-deep)]"
+                      : "text-[var(--muted)] hover:text-[var(--ink-deep)]"
+                  }`}
+                >
+                  {item.label}
+                  <ChevronDown className="h-3 w-3 transition-transform group-hover:rotate-180" />
+                  {pathname.startsWith("/services") && (
+                    <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[var(--accent)]" />
+                  )}
+                </Link>
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 rounded-2xl border border-gray-100 bg-white shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="py-3">
+                    {servicesData.map((s) => (
+                      <Link
+                        key={s.id}
+                        href={s.href}
+                        className={`block px-5 py-2.5 text-sm transition-colors hover:bg-gray-50 ${
+                          pathname === s.href ? "text-[var(--accent)] font-semibold" : "text-[var(--muted)]"
+                        }`}
+                      >
+                        {s.title}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <NavLink key={item.href} href={item.href} label={item.label} active={pathname === item.href} />
+            )
+          )}
         </nav>
 
         <a

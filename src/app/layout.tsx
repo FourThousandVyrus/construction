@@ -20,26 +20,37 @@ const cormorant = Cormorant_Garamond({
 
 export const metadata: Metadata = {
   title: {
-    default: "Epicshield Surfaces | Construction & Engineering",
-    template: "%s | Epicshield Surfaces",
+    default: "Epicshield Infrastructure | Hospital Construction & Medical Technology",
+    template: "%s | Epicshield Infrastructure",
   },
   description:
-    "Epicshield Surfaces is a premier construction and engineering firm specializing in infrastructure development, civil construction, and project management across Africa.",
-  keywords: ["construction", "engineering", "infrastructure development", "civil construction", "Ghana", "Africa", "project management"],
-  authors: [{ name: "Epicshield Surfaces" }],
-  creator: "Epicshield Surfaces",
+    "Epicshield Infrastructure is Ghana's premier private hospital construction and healthcare engineering firm, delivering turnkey medical facilities, cleanrooms, and medical gas systems.",
+  keywords: [
+    "hospital construction Ghana",
+    "healthcare infrastructure Africa",
+    "medical gas piping installation",
+    "operating theatre cleanrooms",
+    "lead-lined hospital doors",
+    "private hospital builder Accra",
+    "medical equipment procurement Kumasi",
+    "clinical engineering services",
+    "Epicshield",
+    "Epicshield Infrastructure"
+  ],
+  authors: [{ name: "Epicshield Infrastructure" }],
+  creator: "Epicshield Infrastructure",
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "Epicshield Surfaces",
-    title: "Epicshield Surfaces | Construction & Engineering",
-    description: "Premier construction and engineering firm building world-class infrastructure across Africa.",
+    siteName: "Epicshield Infrastructure",
+    title: "Epicshield Infrastructure | Hospital Construction & Medical Technology",
+    description: "Ghana's premier private hospital construction and healthcare engineering firm, delivering turnkey medical facilities.",
     url: "https://www.epicshield.co",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Epicshield Surfaces | Construction & Engineering",
-    description: "Premier construction and engineering firm building world-class infrastructure across Africa.",
+    title: "Epicshield Infrastructure | Hospital Construction & Medical Technology",
+    description: "Ghana's premier private hospital construction and healthcare engineering firm, delivering turnkey medical facilities.",
   },
   icons: {
     icon: "/favicon.svg",
