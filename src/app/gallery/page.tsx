@@ -20,7 +20,7 @@ export default function GalleryPage() {
 
   return (
     <main className="flex w-full flex-1 flex-col px-3 pb-10 sm:px-5 sm:pb-12 lg:px-8">
-      <section className="panel-dark relative overflow-hidden rounded-[2.5rem] px-6 py-12 text-white sm:px-12 sm:py-20">
+      <section className="panel-dark relative overflow-hidden rounded-2xl px-6 py-12 text-white sm:rounded-[2.5rem] sm:px-12 sm:py-20">
         <div className="blueprint-grid blueprint-grid-live absolute inset-0 opacity-10 pointer-events-none" />
         <div className="relative z-10 max-w-3xl">
           <p className="section-label eyebrow-line text-[var(--accent)]">Project Gallery</p>
@@ -32,13 +32,13 @@ export default function GalleryPage() {
       </section>
 
       <section className="mt-12">
-        <div className="flex items-center gap-2 overflow-x-auto pb-2 hide-scrollbar">
+        <div className="relative flex items-center gap-2 overflow-x-auto pb-2 hide-scrollbar after:pointer-events-none after:absolute after:right-0 after:top-0 after:h-full after:w-12 after:bg-gradient-to-l after:from-[var(--background)] after:to-transparent">
           <Filter className="h-4 w-4 text-[var(--muted)] shrink-0" />
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`shrink-0 rounded-full px-5 py-2 text-xs font-bold uppercase tracking-widest transition-all ${
+              className={`shrink-0 rounded-full px-5 py-3 text-xs font-bold uppercase tracking-widest transition-all sm:py-2 ${
                 activeCategory === cat
                   ? "bg-[var(--accent)] text-white"
                   : "bg-white border border-[var(--line)] text-[var(--muted)] hover:border-[var(--accent)] hover:text-[var(--accent)]"
@@ -68,7 +68,7 @@ export default function GalleryPage() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--ink-deep)]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-0 md:translate-y-4 opacity-100 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                   <span className="text-[10px] uppercase tracking-widest text-white/80 bg-[var(--accent)] px-3 py-1 rounded-full">
                     {img.category}
                   </span>
@@ -90,16 +90,16 @@ export default function GalleryPage() {
 
           <button
             onClick={(e) => { e.stopPropagation(); setSelectedIndex((prev) => (prev! > 0 ? prev! - 1 : galleryImages.length - 1)); }}
-            className="absolute left-4 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors z-20"
+            className="absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors z-20 sm:left-4 sm:h-12 sm:w-12"
           >
-            <ChevronLeft className="h-6 w-6 text-white" />
+            <ChevronLeft className="h-5 w-5 text-white sm:h-6 sm:w-6" />
           </button>
 
           <button
             onClick={(e) => { e.stopPropagation(); setSelectedIndex((prev) => (prev! < galleryImages.length - 1 ? prev! + 1 : 0)); }}
-            className="absolute right-4 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors z-20"
+            className="absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors z-20 sm:right-4 sm:h-12 sm:w-12"
           >
-            <ChevronRight className="h-6 w-6 text-white" />
+            <ChevronRight className="h-5 w-5 text-white sm:h-6 sm:w-6" />
           </button>
 
           <div className="relative w-full max-w-5xl h-[60vh] sm:h-[75vh]" onClick={(e) => e.stopPropagation()}>

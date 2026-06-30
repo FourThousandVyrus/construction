@@ -40,7 +40,7 @@ export function LiveSiteFeed({ images }: LiveSiteFeedProps) {
       <div className="overflow-hidden rounded-[2rem] border border-[var(--line)]">
         <div ref={trackRef} className="flex gap-4 py-4 px-4" style={{ width: "fit-content" }}>
           {doubled.map((src, i) => (
-            <div key={`${src}-${i}`} className="relative h-48 w-72 shrink-0 overflow-hidden rounded-xl">
+              <div key={`${src}-${i}`} className="relative h-40 w-56 shrink-0 overflow-hidden rounded-xl sm:h-48 sm:w-72">
               <Image
                 src={src}
                 alt={`Site progress ${i + 1}`}

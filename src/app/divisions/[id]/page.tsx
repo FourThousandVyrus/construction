@@ -16,7 +16,7 @@ export default async function DivisionPage({ params }: { params: Promise<{ id: s
 
   return (
     <main className="flex w-full flex-1 flex-col px-3 pb-10 sm:px-5 sm:pb-12 lg:px-8">
-      <section className="panel-dark relative overflow-hidden rounded-[3rem] text-white">
+      <section className="panel-dark relative overflow-hidden rounded-2xl sm:rounded-[3rem] text-white">
         <div className="absolute inset-0">
           <Image src={division.image} alt={division.title} fill className="object-cover opacity-25 mix-blend-overlay" sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-r from-[var(--ink-deep)] via-[var(--ink-deep)]/70 to-transparent" />
@@ -49,7 +49,7 @@ export default async function DivisionPage({ params }: { params: Promise<{ id: s
               </div>
             </div>
 
-            <div className="relative h-[350px] rounded-[3rem] border border-white/10 overflow-hidden">
+            <div className="relative h-[350px] rounded-2xl border border-white/10 overflow-hidden sm:rounded-[3rem]">
               <Image
                 src={division.image}
                 alt={division.title}

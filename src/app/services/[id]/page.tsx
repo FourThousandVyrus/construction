@@ -32,7 +32,7 @@ export default async function ServiceDetailPage({ params }: Props) {
   return (
     <main className="flex w-full flex-1 flex-col px-3 pb-10 sm:px-5 sm:pb-12 lg:px-8">
       {/* Hero */}
-      <section className="panel-dark relative overflow-hidden rounded-[2.5rem] p-8 sm:p-16 text-white">
+      <section className="panel-dark relative overflow-hidden rounded-2xl p-8 sm:rounded-[2.5rem] sm:p-16 text-white">
         <div className="absolute inset-0">
           <Image src={service.images.hero} alt={service.title} fill className="object-cover opacity-50" sizes="100vw" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[var(--ink-deep)] via-[var(--ink-deep)]/60 to-transparent" />

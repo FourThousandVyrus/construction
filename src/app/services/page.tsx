@@ -16,7 +16,7 @@ export default function ServicesPage() {
   return (
     <main className="flex w-full flex-1 flex-col px-3 pb-10 sm:px-5 sm:pb-12 lg:px-8">
       {/* Hero Section */}
-      <section className="panel-dark relative overflow-hidden rounded-[2.5rem] px-6 py-12 text-white sm:px-12 sm:py-20">
+      <section className="panel-dark relative overflow-hidden rounded-2xl px-6 py-12 text-white sm:rounded-[2.5rem] sm:px-12 sm:py-20">
         <div className="blueprint-grid blueprint-grid-live absolute inset-0 opacity-10 pointer-events-none" />
         <div className="relative z-10 max-w-3xl">
           <p className="section-label eyebrow-line text-[var(--accent)]">Core Solutions</p>

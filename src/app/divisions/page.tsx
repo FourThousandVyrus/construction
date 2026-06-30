@@ -12,7 +12,7 @@ export default function DivisionsPage() {
     <main className="flex w-full flex-1 flex-col px-3 pb-10 sm:px-5 sm:pb-12 lg:px-8">
       
       {/* Hero */}
-      <section className="panel-dark relative overflow-hidden rounded-[2.5rem] px-6 py-12 text-white sm:px-12 sm:py-20">
+      <section className="panel-dark relative overflow-hidden rounded-2xl px-6 py-12 text-white sm:rounded-[2.5rem] sm:px-12 sm:py-20">
         <div className="blueprint-grid blueprint-grid-live absolute inset-0 opacity-10 pointer-events-none" />
         <div className="absolute inset-0 opacity-40">
            <div className="drift absolute left-[8%] top-[10%] h-64 w-64 rounded-full bg-[rgba(249,115,22,0.08)] blur-[100px]" />
@@ -32,7 +32,7 @@ export default function DivisionsPage() {
       
       <section className="mt-12">
         <p className="mb-3 text-center text-[11px] uppercase tracking-[0.3em] text-[var(--muted)]">
-          Hover any card to explore ↓
+          Tap or hover any card to explore ↓
         </p>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {divisionData.map((div) => (

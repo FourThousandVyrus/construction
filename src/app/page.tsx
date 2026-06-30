@@ -58,7 +58,7 @@ export default function Home() {
 
             <KineticHeading
               as="h1"
-              className="font-serif text-[3rem] leading-[1.05] text-white sm:text-[5rem] lg:text-[6.5rem]"
+              className="font-serif text-[clamp(2.2rem,8vw,3rem)] leading-[1.05] text-white sm:text-[5rem] lg:text-[6.5rem]"
               lines={[
                 ["Creating Spaces"],
                 [{ key: "accent", node: <span className="text-[var(--accent)] italic">To Save Lives.</span> }],
@@ -331,7 +331,7 @@ export default function Home() {
 
       {/* ── Featured Case Study ── */}
       <section className="relative">
-        <div className="panel-ivory relative overflow-hidden rounded-[3rem] p-8 sm:p-16">
+        <div className="panel-ivory relative overflow-hidden rounded-2xl p-8 sm:rounded-[3rem] sm:p-16">
           <div className="blueprint-grid absolute inset-0 opacity-[0.04] pointer-events-none" style={{ filter: "invert(1)" }} />
           <div className="relative z-10">
             <p className="section-label eyebrow-line text-[var(--accent)]">Featured Project</p>
@@ -389,7 +389,7 @@ export default function Home() {
       </section>
 
       {/* ── Final CTA ── */}
-      <section className="mt-12 panel-ivory rounded-[3rem] p-8 sm:p-16 text-center relative overflow-hidden">
+      <section className="mt-12 panel-ivory rounded-2xl p-8 sm:rounded-[3rem] sm:p-16 text-center relative overflow-hidden">
         <div className="absolute right-0 top-0 h-full w-1/3 bg-[radial-gradient(circle_at_100%_0%,rgba(249,115,22,0.08),transparent_70%)]" />
         <div className="relative z-10">
           <KineticHeading as="h2" className="font-serif text-4xl sm:text-6xl text-[var(--ink-deep)]" text="Ready to build something exceptional?" />

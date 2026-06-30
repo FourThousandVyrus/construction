@@ -284,7 +284,7 @@ export default function AboutPage() {
 
       {/* ── CTA ── */}
 
-      <section className="mt-20 panel-ivory rounded-[3rem] p-8 sm:p-16 text-center relative overflow-hidden">
+      <section className="mt-20 panel-ivory rounded-2xl p-8 sm:rounded-[3rem] sm:p-16 text-center relative overflow-hidden">
         <div className="absolute right-0 top-0 h-full w-1/3 bg-[radial-gradient(circle_at_100%_0%,rgba(249,115,22,0.08),transparent_70%)]" />
         <div className="relative z-10">
           <KineticHeading as="h2" className="font-serif text-4xl sm:text-6xl text-[var(--ink-deep)]" text="Ready to build with us?" />

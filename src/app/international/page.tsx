@@ -37,7 +37,7 @@ export default function InternationalPage() {
   return (
     <main className="flex w-full flex-1 flex-col px-3 pb-10 sm:px-5 sm:pb-12 lg:px-8">
       {/* Hero */}
-      <section className="panel-dark relative overflow-hidden rounded-[2.5rem] px-6 py-14 text-white sm:px-12 sm:py-20">
+      <section className="panel-dark relative overflow-hidden rounded-2xl px-6 py-14 text-white sm:rounded-[2.5rem] sm:px-12 sm:py-20">
         <div className="blueprint-grid blueprint-grid-live absolute inset-0 opacity-10 pointer-events-none" />
         <div className="absolute inset-0">
           <Image src="/images/image_20.jpeg" alt="International study tour" fill className="object-cover opacity-20" sizes="100vw" priority />
@@ -149,7 +149,7 @@ export default function InternationalPage() {
       </section>
 
       {/* CTA */}
-      <section className="mt-16 panel-ivory rounded-[3rem] p-10 sm:p-16 text-center relative overflow-hidden">
+      <section className="mt-16 panel-ivory rounded-2xl p-10 sm:rounded-[3rem] sm:p-16 text-center relative overflow-hidden">
         <div className="absolute right-0 top-0 h-full w-1/3 bg-[radial-gradient(circle_at_100%_0%,rgba(249,115,22,0.08),transparent_70%)]" />
         <div className="relative z-10">
           <KineticHeading as="h2" className="font-serif text-3xl sm:text-5xl text-[var(--ink-deep)]" text="Bringing global standards to your project." />

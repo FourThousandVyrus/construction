@@ -21,7 +21,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
   return (
     <main className="flex w-full flex-1 flex-col px-3 pb-10 sm:px-5 sm:pb-12 lg:px-8">
       {/* Immersive Hero */}
-      <section className="panel-dark relative overflow-hidden rounded-[3rem] text-white">
+      <section className="panel-dark relative overflow-hidden rounded-2xl sm:rounded-[3rem] text-white">
         <NeuralNetworkBg className="absolute inset-0 h-full w-full opacity-10" />
         <div className="blueprint-grid blueprint-grid-live absolute inset-0 opacity-10 pointer-events-none" />
         <div className="absolute inset-0">
@@ -109,7 +109,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
       )}
 
       {/* CTA */}
-      <section className="mt-20 rounded-[3rem] bg-[var(--ink-deep)] p-12 text-white text-center relative overflow-hidden">
+      <section className="mt-20 rounded-2xl bg-[var(--ink-deep)] p-12 text-white text-center relative overflow-hidden sm:rounded-[3rem]">
          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(249,115,22,0.1),transparent_70%)]" />
           <KineticHeading as="h2" className="text-3xl sm:text-5xl font-serif mb-8 relative z-10" text="Scale your construction vision." />
           <Link href="/contact" className="inline-flex items-center gap-3 rounded-full bg-[var(--accent)] px-10 py-4 font-bold text-white transition-transform hover:scale-105 relative z-10">

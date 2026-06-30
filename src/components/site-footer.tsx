@@ -6,8 +6,8 @@ import { company, contact } from "@/lib/brochure-content";
 export function SiteFooter() {
   return (
     <footer className="w-full px-3 pb-12 pt-24 sm:px-5 lg:px-8">
-      <div className="relative rounded-[3rem] bg-[var(--ink-deep)] p-8 text-white sm:p-16">
-        <div className="blueprint-grid absolute inset-0 opacity-[0.04] pointer-events-none rounded-[3rem] overflow-hidden" />
+      <div className="relative rounded-2xl bg-[var(--ink-deep)] p-8 text-white sm:rounded-[3rem] sm:p-16">
+         <div className="blueprint-grid absolute inset-0 opacity-[0.04] pointer-events-none rounded-2xl sm:rounded-[3rem] overflow-hidden" />
 
         <div className="relative z-10 grid gap-12 lg:grid-cols-[1.2fr_1fr_1fr]">
           <div>

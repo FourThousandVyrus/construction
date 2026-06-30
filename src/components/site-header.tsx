@@ -3,9 +3,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Phone, ChevronDown } from "lucide-react";
+import { Phone, ChevronDown, Menu, X } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
 import { navItems, servicesData } from "@/lib/site-content";
 import { company, contact } from "@/lib/brochure-content";
+import { useState } from "react";
 
 function NavLink({ href, label, active }: { href: string; label: string; active: boolean }) {
   return (
@@ -27,6 +29,13 @@ function NavLink({ href, label, active }: { href: string; label: string; active:
 
 export function SiteHeader() {
   const pathname = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+    setServicesOpen(false);
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white shadow-sm">
@@ -75,21 +84,139 @@ export function SiteHeader() {
           )}
         </nav>
 
-        <a
-          href={`tel:${contact.phone.replace(/\s/g, "")}`}
-          className="group inline-flex shrink-0 items-center gap-2 rounded-full bg-[var(--accent)] px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-[var(--ink-deep)] sm:px-6 sm:py-3 sm:text-sm"
-        >
-          <Phone className="h-3.5 w-3.5" />
-          {contact.phone}
-        </a>
+        <div className="flex items-center gap-3">
+          <a
+            href={`tel:${contact.phone.replace(/\s/g, "")}`}
+            className="group inline-flex shrink-0 items-center gap-2 rounded-full bg-[var(--accent)] px-5 py-3 text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-[var(--ink-deep)] sm:px-6 sm:py-3 sm:text-sm"
+          >
+            <Phone className="h-3.5 w-3.5 shrink-0" />
+            <span className="hidden sm:inline">{contact.phone}</span>
+          </a>
+
+          <button
+            onClick={() => setMenuOpen(true)}
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 md:hidden"
+            aria-label="Open menu"
+          >
+            <Menu className="h-5 w-5 text-[var(--ink-deep)]" />
+          </button>
+        </div>
       </div>
 
-      {/* Mobile nav */}
-      <div className="flex flex-wrap items-center gap-5 border-t border-gray-100 px-4 py-2.5 md:hidden">
-        {navItems.map((item) => (
-          <NavLink key={item.href} href={item.href} label={item.label} active={pathname === item.href} />
-        ))}
-      </div>
+      <AnimatePresence>
+        {menuOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm md:hidden"
+              onClick={closeMenu}
+            />
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", damping: 28, stiffness: 300 }}
+              className="fixed top-0 right-0 z-50 flex h-full w-full max-w-sm flex-col bg-[var(--ink-deep)] md:hidden overflow-y-auto"
+            >
+              <div className="blueprint-grid pointer-events-none absolute inset-0 opacity-[0.04]" />
+              <div className="relative z-10 flex h-full flex-col p-6">
+                <div className="mb-10 flex items-center justify-between">
+                  <span className="font-serif text-xl font-bold text-white">Menu</span>
+                  <button
+                    onClick={closeMenu}
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white"
+                    aria-label="Close menu"
+                  >
+                    <X className="h-5 w-5" />
+                  </button>
+                </div>
+
+                <nav className="flex flex-col gap-1">
+                  {navItems.map((item) =>
+                    item.label === "Services" ? (
+                      <div key={item.href}>
+                        <button
+                          onClick={() => setServicesOpen(!servicesOpen)}
+                          className="flex w-full items-center justify-between py-4 text-sm font-bold uppercase tracking-[0.2em] text-white transition-colors hover:text-[var(--accent)]"
+                        >
+                          {item.label}
+                          <ChevronDown
+                            className={`h-4 w-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`}
+                          />
+                        </button>
+                        <AnimatePresence>
+                          {servicesOpen && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.2 }}
+                              className="overflow-hidden"
+                            >
+                              <div className="ml-2 flex flex-col gap-1 border-l border-white/10 pb-3 pl-4">
+                                {servicesData.map((s) => (
+                                  <Link
+                                    key={s.id}
+                                    href={s.href}
+                                    onClick={closeMenu}
+                                    className={`py-3 text-sm transition-colors ${
+                                      pathname === s.href
+                                        ? "font-semibold text-[var(--accent)]"
+                                        : "text-white/60 hover:text-white"
+                                    }`}
+                                  >
+                                    {s.title}
+                                  </Link>
+                                ))}
+                                <Link
+                                  href="/services"
+                                  onClick={closeMenu}
+                                  className="mt-2 text-xs font-bold uppercase tracking-widest text-[var(--accent)]"
+                                >
+                                  View All Services →
+                                </Link>
+                              </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    ) : (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        onClick={closeMenu}
+                        className={`py-4 text-sm font-bold uppercase tracking-[0.2em] transition-colors ${
+                          pathname === item.href
+                            ? "text-[var(--accent)]"
+                            : "text-white hover:text-[var(--accent)]"
+                        }`}
+                      >
+                        {item.label}
+                      </Link>
+                    )
+                  )}
+                </nav>
+
+                <div className="mt-auto border-t border-white/10 pt-8">
+                  <a
+                    href={`tel:${contact.phone.replace(/\s/g, "")}`}
+                    className="flex w-full items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-6 py-4 font-bold text-white transition-all hover:bg-white hover:text-[var(--ink-deep)]"
+                  >
+                    <Phone className="h-4 w-4" />
+                    {contact.phone}
+                  </a>
+                  <p className="mt-4 text-center text-xs text-white/30">
+                    {contact.email}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

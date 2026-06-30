@@ -10,7 +10,7 @@ export default function ContactPage() {
     <main className="flex w-full flex-1 flex-col px-3 pb-10 sm:px-5 sm:pb-12 lg:px-8">
 
       {/* ── Contact Hero ── */}
-      <section className="mt-6 panel-dark relative overflow-hidden rounded-[3rem] p-8 sm:p-16 text-white">
+      <section className="mt-6 panel-dark relative overflow-hidden rounded-2xl p-8 sm:rounded-[3rem] sm:p-16 text-white">
         <div className="blueprint-grid absolute inset-0 opacity-[0.04] pointer-events-none" />
         <div className="relative z-10 grid gap-12 lg:grid-cols-2">
           <div>
@@ -59,7 +59,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-white/[0.06] via-white/[0.02] to-transparent p-8 sm:p-12 backdrop-blur-xl min-h-[480px] flex flex-col justify-between">
+          <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-white/[0.06] via-white/[0.02] to-transparent p-8 sm:p-12 backdrop-blur-xl min-h-[360px] sm:min-h-[480px] flex flex-col justify-between">
             {/* Blueprint grid */}
             <div className="blueprint-grid absolute inset-0 opacity-[0.07]" />
 
@@ -152,7 +152,7 @@ export default function ContactPage() {
 
       {/* ── CTA ── */}
       
-      <section className="mt-20 panel-ivory rounded-[3rem] p-8 sm:p-16 text-center relative overflow-hidden">
+      <section className="mt-20 panel-ivory rounded-2xl p-8 sm:rounded-[3rem] sm:p-16 text-center relative overflow-hidden">
         <div className="absolute right-0 top-0 h-full w-1/3 bg-[radial-gradient(circle_at_100%_0%,rgba(249,115,22,0.08),transparent_70%)]" />
         <div className="relative z-10">
           <KineticHeading as="h2" className="font-serif text-4xl sm:text-6xl text-[var(--ink-deep)]" text="Let's work together." />

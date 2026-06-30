@@ -11,7 +11,7 @@ export default function ProjectsPage() {
   return (
     <main className="flex w-full flex-1 flex-col px-3 pb-10 sm:px-5 sm:pb-12 lg:px-8">
       {/* Hero Section */}
-      <section className="panel-dark relative overflow-hidden rounded-[2.5rem] px-6 py-12 text-white sm:px-12 sm:py-20">
+      <section className="panel-dark relative overflow-hidden rounded-2xl px-6 py-12 text-white sm:rounded-[2.5rem] sm:px-12 sm:py-20">
         <NeuralNetworkBg className="absolute inset-0 h-full w-full opacity-20" />
         <div className="blueprint-grid blueprint-grid-live absolute inset-0 opacity-10 pointer-events-none" />
         <div className="absolute inset-0 opacity-40">
@@ -82,29 +82,29 @@ export default function ProjectsPage() {
                </div>
 
                {/* Floating Stats */}
-               <div className="grid grid-cols-3 gap-4 border-t border-gray-100 pt-6">
-                  <div className="flex flex-col gap-1">
-                     <Activity className="h-4 w-4 text-[var(--slate-soft)]" />
-                     <span className="text-[10px] text-[var(--muted)]">Capacity</span>
-                     <span className="text-sm font-bold text-[var(--ink-deep)]">{project.stats.capacity}</span>
-                  </div>
-                  <div className="flex flex-col gap-1">
-                     <Clock className="h-4 w-4 text-[var(--slate-soft)]" />
-                     <span className="text-[10px] text-[var(--muted)]">Duration</span>
-                     <span className="text-sm font-bold text-[var(--ink-deep)]">{project.stats.duration}</span>
-                  </div>
-                  <div className="flex flex-col gap-1">
-                     <Zap className="h-4 w-4 text-[var(--slate-soft)]" />
-                     <span className="text-[10px] text-[var(--muted)]">Efficiency</span>
-                     <span className="text-sm font-bold text-[var(--ink-deep)]">{project.stats.efficiency}</span>
-                  </div>
-               </div>
+                <div className="grid grid-cols-3 gap-2 border-t border-gray-100 pt-6 sm:gap-4">
+                   <div className="flex flex-col gap-1">
+                      <Activity className="h-3.5 w-3.5 text-[var(--slate-soft)] sm:h-4 sm:w-4" />
+                      <span className="text-[9px] text-[var(--muted)] sm:text-[10px]">Capacity</span>
+                      <span className="text-xs font-bold text-[var(--ink-deep)] sm:text-sm">{project.stats.capacity}</span>
+                   </div>
+                   <div className="flex flex-col gap-1">
+                      <Clock className="h-3.5 w-3.5 text-[var(--slate-soft)] sm:h-4 sm:w-4" />
+                      <span className="text-[9px] text-[var(--muted)] sm:text-[10px]">Duration</span>
+                      <span className="text-xs font-bold text-[var(--ink-deep)] sm:text-sm">{project.stats.duration}</span>
+                   </div>
+                   <div className="flex flex-col gap-1">
+                      <Zap className="h-3.5 w-3.5 text-[var(--slate-soft)] sm:h-4 sm:w-4" />
+                      <span className="text-[9px] text-[var(--muted)] sm:text-[10px]">Efficiency</span>
+                      <span className="text-xs font-bold text-[var(--ink-deep)] sm:text-sm">{project.stats.efficiency}</span>
+                   </div>
+                </div>
 
                <div className="flex items-center justify-between pt-2">
                   <Link href={`/projects/${project.id}`} className="text-xs font-bold uppercase tracking-widest text-[var(--slate-strong)] hover:underline">
                      View Case Study →
                   </Link>
-                  <div className="h-8 w-8 rounded-full bg-gray-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="h-8 w-8 rounded-full bg-gray-50 flex items-center justify-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity">
                      <ArrowRight className="h-4 w-4 text-[var(--slate-strong)]" />
                   </div>
                </div>
@@ -117,7 +117,7 @@ export default function ProjectsPage() {
       {/* ── Featured Case Study ── */}
       
       <section className="mt-20 relative">
-        <div className="panel-dark relative overflow-hidden rounded-[3rem] p-8 sm:p-16 text-white">
+        <div className="panel-dark relative overflow-hidden rounded-2xl p-8 sm:rounded-[3rem] sm:p-16 text-white">
           <div className="blueprint-grid blueprint-grid-live absolute inset-0 opacity-10 pointer-events-none" />
           <div className="relative z-10">
             <p className="section-label eyebrow-line text-[var(--accent)]">Featured Case Study</p>
@@ -151,7 +151,7 @@ export default function ProjectsPage() {
 
       {/* CTA Section */}
       
-      <section className="mt-16 panel-ivory rounded-[3rem] p-8 sm:p-16 relative overflow-hidden">
+      <section className="mt-16 panel-ivory rounded-2xl p-8 sm:rounded-[3rem] sm:p-16 relative overflow-hidden">
          <div className="absolute right-0 top-0 h-full w-1/3 bg-[radial-gradient(circle_at_100%_0%,rgba(249,115,22,0.08),transparent_70%)]" />
          <div className="relative z-10 grid gap-12 lg:grid-cols-2 lg:items-center">
              <div>
