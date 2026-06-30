@@ -87,7 +87,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-3">
           <a
             href={`tel:${contact.phone.replace(/\s/g, "")}`}
-            className="group inline-flex shrink-0 items-center gap-2 rounded-full bg-[var(--accent)] px-5 py-3 text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-[var(--ink-deep)] sm:px-6 sm:py-3 sm:text-sm"
+            className="group hidden shrink-0 items-center gap-2 rounded-full bg-[var(--accent)] px-6 py-3 text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-[var(--ink-deep)] sm:inline-flex sm:px-6 sm:py-3 sm:text-sm"
           >
             <Phone className="h-3.5 w-3.5 shrink-0" />
             <span className="hidden sm:inline">{contact.phone}</span>
