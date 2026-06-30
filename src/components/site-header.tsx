@@ -133,9 +133,8 @@ export function SiteHeader() {
             >
               <div className="blueprint-grid pointer-events-none absolute inset-0 opacity-[0.04]" />
               <div className="absolute -left-32 top-20 h-64 w-64 rounded-full bg-[var(--accent)]/8 blur-[100px] pointer-events-none" />
-              <div className="relative z-10 flex h-full flex-col px-5 pb-8 pt-5">
-                <div className="flex items-center justify-between mb-10">
-                  <Image src="/epic-logo.png" alt={company.name} width={100} height={34} className="h-7 w-auto brightness-0 invert opacity-60" />
+              <div className="relative z-10 flex h-full flex-col px-5 pb-8 pt-4">
+                <div className="flex justify-end mb-6">
                   <button
                     onClick={closeMenu}
                     className="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 text-white/40 transition-colors hover:border-white/20 hover:text-white"
@@ -143,6 +142,9 @@ export function SiteHeader() {
                   >
                     <X className="h-3.5 w-3.5" />
                   </button>
+                </div>
+                <div className="flex justify-center mb-10">
+                  <Image src="/epic-logo.png" alt={company.name} width={130} height={44} className="h-auto w-[130px] brightness-0 invert" priority />
                 </div>
 
                 <nav className="flex flex-col gap-1">
