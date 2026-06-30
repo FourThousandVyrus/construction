@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const imagesDir = path.resolve(__dirname, '..', 'public', 'images');
 
-const QUALITY = 80;
+const QUALITY = 90;
 const SUPPORTED = new Set(['.png', '.jpg', '.jpeg', '.webp']);
 
 // Magic bytes for image type detection
