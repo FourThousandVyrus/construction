@@ -65,10 +65,8 @@ export function GlobalLoader() {
         e.stopPropagation();
         const id = href.slice(1);
         if (!id) return;
-        const timer = setTimeout(() => {
-          const target = document.getElementById(id);
-          if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
-        }, 100);
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
         return;
       }
 
@@ -90,10 +88,10 @@ export function GlobalLoader() {
   return (
     <div className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[var(--background)]">
       <div className="blueprint-grid pointer-events-none absolute inset-0 opacity-[0.03]" />
-      <div className="absolute -right-32 -top-32 h-[500px] w-[500px] rounded-full bg-[var(--accent)]/5 blur-[120px] pointer-events-none" />
-      <div className="relative z-10 flex flex-col items-center gap-8">
+      <div className="absolute -right-32 -top-32 h-[300px] w-[300px] rounded-full bg-[var(--accent)]/5 blur-[100px] pointer-events-none sm:h-[500px] sm:w-[500px] sm:blur-[120px]" />
+      <div className="relative z-10 flex flex-col items-center gap-6 sm:gap-8">
         <div className="route-loader-chip">Loading</div>
-        <div className="h-1 w-56 overflow-hidden rounded-full bg-gray-200">
+        <div className="h-1 w-48 overflow-hidden rounded-full bg-gray-200 sm:w-56">
           <div
             className="h-full rounded-full bg-[var(--accent)] transition-all duration-300 ease-out"
             style={{ width: `${progress}%` }}
