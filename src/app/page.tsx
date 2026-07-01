@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Activity, ShieldCheck, Scan, Building2, Heart, Users, MapPin, Check, ChevronDown } from "lucide-react";
@@ -185,7 +183,7 @@ export default function Home() {
       {/* ── Live Site Feed ── */}
       <section className="relative overflow-hidden py-10">
         <div className="px-3 sm:px-5 lg:px-8 w-full">
-          <LiveSiteFeed images={liveSiteImages as unknown as string[]} />
+          <LiveSiteFeed images={liveSiteImages} />
         </div>
       </section>
 
@@ -231,7 +229,7 @@ export default function Home() {
               { src: "/images/nuclear regulatory authority ghana.png", name: "Nuclear Regulatory Authority", cert: "Radiation Safety Licensed", certId: "NRA/IR/2023-0047", since: "Since 2020" },
               { src: "/images/food and drugs authority.png", name: "Food and Drugs Authority", cert: "FDA Standards Partner", certId: "FDA/EL/2022-0091", since: "Since 2022" },
               { src: "/images/ghana ministry of health.jpg", name: "Ministry of Works & Housing", cert: "Registered Contractor", certId: "MWH/RC/2021-0035", since: "Since 2021" },
-              { src: "/images/world health organization.jpg", name: "Ghana Fire Service", cert: "Fire Safety Compliant", certId: "GFS/SC/2024-0118", since: "Since 2024" },
+              { src: "/images/world health organization.jpg", name: "World Health Organization", cert: "Healthcare Standards Partner", certId: "WHO/HS/2024-0036", since: "Since 2024" },
             ].map((auth) => (
               <MagneticTiltCard key={auth.name} className="group relative overflow-hidden rounded-2xl border border-[var(--line)] bg-white p-6 transition-all hover:shadow-md">
                 <div className="flex items-center gap-5">

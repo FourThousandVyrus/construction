@@ -40,7 +40,7 @@ export function ProjectGallery({ images, title = "Project Gallery" }: ProjectGal
           <button
             key={src}
             onClick={() => setSelectedIndex(i)}
-            className="snap-start shrink-0 w-[280px] sm:w-[320px] h-64 rounded-2xl overflow-hidden relative group cursor-pointer hover:ring-2 hover:ring-[var(--accent)] transition-all duration-300"
+            className="snap-start shrink-0 w-[280px] sm:w-[320px] h-64 rounded-2xl overflow-hidden relative group cursor-pointer hover:ring-2 hover:ring-[var(--accent)] focus-visible:ring-2 focus-visible:ring-[var(--accent)] transition-all duration-300"
           >
             <Image
               src={src}
@@ -59,14 +59,19 @@ export function ProjectGallery({ images, title = "Project Gallery" }: ProjectGal
 
       {/* Lightbox */}
       {selectedIndex !== null && (
-        <div className="fixed inset-0 z-50 bg-[var(--ink-deep)]/95 backdrop-blur-xl flex items-center justify-center p-4" onClick={() => setSelectedIndex(null)}>
-          <button onClick={() => setSelectedIndex(null)} className="absolute top-6 right-6 h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+        <div
+          className="fixed inset-0 z-50 bg-[var(--ink-deep)]/95 backdrop-blur-xl flex items-center justify-center p-4"
+          onClick={() => setSelectedIndex(null)}
+          onKeyDown={(e) => { if (e.key === "Escape") setSelectedIndex(null); }}
+        >
+          <button onClick={() => setSelectedIndex(null)} className="absolute top-6 right-6 h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors" aria-label="Close lightbox">
             <X className="h-5 w-5 text-white" />
           </button>
 
           <button
             onClick={(e) => { e.stopPropagation(); setSelectedIndex((prev) => (prev! > 0 ? prev! - 1 : images.length - 1)); }}
             className="absolute left-6 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
+            aria-label="Previous image"
           >
             <ChevronLeft className="h-6 w-6 text-white" />
           </button>
@@ -74,6 +79,7 @@ export function ProjectGallery({ images, title = "Project Gallery" }: ProjectGal
           <button
             onClick={(e) => { e.stopPropagation(); setSelectedIndex((prev) => (prev! < images.length - 1 ? prev! + 1 : 0)); }}
             className="absolute right-6 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
+            aria-label="Next image"
           >
             <ChevronRight className="h-6 w-6 text-white" />
           </button>

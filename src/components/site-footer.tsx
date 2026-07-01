@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import { navItems } from "@/lib/site-content";
 import { company, contact } from "@/lib/brochure-content";
 
@@ -35,7 +36,7 @@ export function SiteFooter() {
             <p className="text-[10px] uppercase tracking-widest text-white/30 mb-6">Contact</p>
             <div className="flex flex-col gap-3 text-sm text-white/60">
               <p>{contact.address}</p>
-              <a href={`tel:${contact.phone}`} className="hover:text-[var(--accent)] transition-colors">{contact.phone}</a>
+              <a href={`tel:${contact.phone.replace(/\s/g, "")}`} className="hover:text-[var(--accent)] transition-colors">{contact.phone}</a>
               <a href={`mailto:${contact.email}`} className="hover:text-[var(--accent)] transition-colors">{contact.email}</a>
               <a href={`https://${contact.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--accent)] transition-colors">{contact.website}</a>
             </div>
@@ -43,7 +44,11 @@ export function SiteFooter() {
         </div>
 
         <div className="relative z-10 mt-16 flex flex-col justify-between gap-6 border-t border-white/10 pt-8 sm:flex-row sm:items-center">
-          <p className="text-xs text-white/40">© 2026 {company.name}. All rights reserved.</p>
+          <p className="text-xs text-white/40">© {new Date().getFullYear()} {company.name}. All rights reserved.</p>
+          <Link href="/contact" className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-6 py-2.5 text-xs font-bold uppercase tracking-widest text-white transition-all hover:bg-[var(--accent)]/80">
+            Start Your Project
+            <ArrowRight className="h-3.5 w-3.5" />
+          </Link>
         </div>
       </div>
     </footer>

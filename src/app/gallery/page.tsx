@@ -38,6 +38,7 @@ export default function GalleryPage() {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
+              aria-pressed={activeCategory === cat}
               className={`shrink-0 rounded-full px-5 py-3 text-xs font-bold uppercase tracking-widest transition-all sm:py-2 ${
                 activeCategory === cat
                   ? "bg-[var(--accent)] text-white"
@@ -54,10 +55,10 @@ export default function GalleryPage() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {filtered.map((img, i) => (
 
-              <MagneticTiltCard className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-[var(--line)] bg-white cursor-pointer">
+              <MagneticTiltCard className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-[var(--line)] bg-white">
                 <button
                   onClick={() => setSelectedIndex(galleryImages.indexOf(img))}
-                  className="absolute inset-0 z-10"
+                  className="absolute inset-0 z-10 focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
                   aria-label={`View ${img.category} image ${i + 1}`}
                 />
                 <Image
@@ -83,14 +84,19 @@ export default function GalleryPage() {
       </section>
 
       {selectedIndex !== null && (
-        <div className="fixed inset-0 z-50 bg-[var(--ink-deep)]/95 backdrop-blur-xl flex items-center justify-center p-4" onClick={() => setSelectedIndex(null)}>
-          <button onClick={() => setSelectedIndex(null)} className="absolute top-6 right-6 h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors z-20">
+        <div
+          className="fixed inset-0 z-50 bg-[var(--ink-deep)]/95 backdrop-blur-xl flex items-center justify-center p-4"
+          onClick={() => setSelectedIndex(null)}
+          onKeyDown={(e) => { if (e.key === "Escape") setSelectedIndex(null); }}
+        >
+          <button onClick={() => setSelectedIndex(null)} className="absolute top-6 right-6 h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors z-20" aria-label="Close lightbox">
             <X className="h-5 w-5 text-white" />
           </button>
 
           <button
             onClick={(e) => { e.stopPropagation(); setSelectedIndex((prev) => (prev! > 0 ? prev! - 1 : galleryImages.length - 1)); }}
             className="absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors z-20 sm:left-4 sm:h-12 sm:w-12"
+            aria-label="Previous image"
           >
             <ChevronLeft className="h-5 w-5 text-white sm:h-6 sm:w-6" />
           </button>
@@ -98,6 +104,7 @@ export default function GalleryPage() {
           <button
             onClick={(e) => { e.stopPropagation(); setSelectedIndex((prev) => (prev! < galleryImages.length - 1 ? prev! + 1 : 0)); }}
             className="absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors z-20 sm:right-4 sm:h-12 sm:w-12"
+            aria-label="Next image"
           >
             <ChevronRight className="h-5 w-5 text-white sm:h-6 sm:w-6" />
           </button>

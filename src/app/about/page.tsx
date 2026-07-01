@@ -81,7 +81,7 @@ export default function AboutPage() {
 
           <div className="space-y-10">
             {[
-              { year: "2024", title: "Company Founded", desc: "Epicshield Infrastructure is established by Joshua Cobbinah with a vision to transform healthcare infrastructure across Ghana and Africa." },
+              { year: "2024", title: "Company Founded", desc: "Epicshield Surfaces is established by Joshua Cobbinah with a vision to transform healthcare infrastructure across Ghana and Africa." },
               { year: "2025", title: "Healthcare Construction Expansion", desc: "Expansion into full-scale private healthcare construction, focusing on hospital development and clinical infrastructure." },
               { year: "2025", title: "Sokoban Hospital Project", desc: "Ground-breaking of the 20-bed Sokoban Hospital in Kumasi — our first flagship hospital development." },
               { year: "2026", title: "50-Bed Hospital Project – Adenta", desc: "Commencement of the Adenta 50-Bed & 33-Bed Specialist Hospital in Accra, our largest project to date." },

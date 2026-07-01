@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 interface LiveSiteFeedProps {
-  images: string[];
+  images: readonly string[];
 }
 
 export function LiveSiteFeed({ images }: LiveSiteFeedProps) {

@@ -134,7 +134,7 @@ export default function ContactPage() {
           <KineticHeading as="h2" className="mt-4 font-serif text-4xl sm:text-6xl" text="Building Beyond Bricks." />
         </div>
          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--muted)]">
-           At Epicshield Infrastructure, we believe that building hospital infrastructure is only part of our mission. We are equally committed to clinical excellence, healthcare access, and saving lives.
+           At Epicshield Surfaces, we believe that building hospital infrastructure is only part of our mission. We are equally committed to clinical excellence, healthcare access, and saving lives.
          </p>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {csr.map((item) => (

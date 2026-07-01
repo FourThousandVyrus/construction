@@ -56,12 +56,8 @@ export interface Service {
   images: {
     hero: string;
     card: string;
-    detail01: string;
-    detail02: string;
     feature01: string;
     feature02: string;
-    cta: string;
-    gallery01: string;
   };
   gallery: string[];
 }
@@ -85,12 +81,8 @@ export const servicesData: Service[] = [
     images: {
       hero: "/images/services/srv-hospital-hero.webp",
       card: "/images/services/srv-hospital-card.webp",
-      detail01: "/images/services/srv-hospital-detail-01.webp",
-      detail02: "/images/services/srv-hospital-detail-02.webp",
       feature01: "/images/services/srv-hospital-feature-01.webp",
       feature02: "/images/services/srv-hospital-feature-02.webp",
-      cta: "/images/services/srv-hospital-cta.webp",
-      gallery01: "/images/services/srv-hospital-gallery-01.webp",
     },
     gallery: [],
   },
@@ -113,12 +105,8 @@ export const servicesData: Service[] = [
     images: {
       hero: "/images/services/srv-medtech-hero.webp",
       card: "/images/services/srv-medtech-card.webp",
-      detail01: "/images/services/srv-medtech-detail-01.webp",
-      detail02: "/images/services/srv-medtech-detail-02.webp",
       feature01: "/images/services/srv-medtech-feature-01.webp",
       feature02: "/images/services/srv-medtech-feature-02.webp",
-      cta: "/images/services/srv-medtech-cta.webp",
-      gallery01: "/images/services/srv-medtech-gallery-01.webp",
     },
     gallery: ["/images/medical equipment 1.png", "/images/medical equipment 2.png"],
   },
@@ -141,12 +129,8 @@ export const servicesData: Service[] = [
     images: {
       hero: "/images/services/srv-eng-hero.webp",
       card: "/images/services/srv-eng-card.webp",
-      detail01: "/images/services/srv-eng-detail-01.webp",
-      detail02: "/images/services/srv-eng-detail-02.webp",
       feature01: "/images/services/srv-eng-feature-01.webp",
       feature02: "/images/services/srv-eng-feature-02.webp",
-      cta: "/images/services/srv-eng-cta.webp",
-      gallery01: "/images/services/srv-eng-gallery-01.webp",
     },
     gallery: ["/images/healthcare engineering.png"],
   },
@@ -169,12 +153,8 @@ export const servicesData: Service[] = [
     images: {
       hero: "/images/services/srv-doors-hero.webp",
       card: "/images/services/srv-doors-card.webp",
-      detail01: "/images/services/srv-doors-detail-01.webp",
-      detail02: "/images/services/srv-doors-detail-02.webp",
       feature01: "/images/services/srv-doors-feature-01.webp",
       feature02: "/images/services/srv-doors-feature-02.webp",
-      cta: "/images/services/srv-doors-cta.webp",
-      gallery01: "/images/services/srv-doors-gallery-01.webp",
     },
     gallery: [
       "/images/hospital doors 1.png",
@@ -202,12 +182,8 @@ export const servicesData: Service[] = [
     images: {
       hero: "/images/services/srv-facility-hero.webp",
       card: "/images/services/srv-facility-card.webp",
-      detail01: "/images/services/srv-facility-detail-01.webp",
-      detail02: "/images/services/srv-facility-detail-02.webp",
       feature01: "/images/services/srv-facility-feature-01.webp",
       feature02: "/images/services/srv-facility-feature-02.webp",
-      cta: "/images/services/srv-facility-cta.webp",
-      gallery01: "/images/services/srv-facility-gallery-01.webp",
     },
     gallery: [],
   },
@@ -288,31 +264,26 @@ export const processPhases = [
     phase: "01",
     title: "Discovery & Feasibility",
     description: "Clinical workflow zoning, site evaluation, soil testing, and budget assessment, ensuring project feasibility before breaking ground.",
-    icon: "Search",
   },
   {
     phase: "02",
     title: "Design & Engineering",
     description: "Clinical space planning, infection control layouts, HVAC filtration (HEPA) schematics, and BIM modeling.",
-    icon: "PenTool",
   },
   {
     phase: "03",
     title: "Procurement & Logistics",
     description: "Sourcing certified medical gas materials, medical equipment supply chain coordination, and clinical engineering logistics.",
-    icon: "Truck",
   },
   {
     phase: "04",
     title: "Construction & Execution",
     description: "Cleanroom partitions installation, lead shielding execution, medical gas distribution networks, and structural hospital build-out.",
-    icon: "HardHat",
   },
   {
     phase: "05",
     title: "Commissioning & Handover",
     description: "Pressure testing gas systems, HEPA airflow testing, clinical equipment calibration, and final regulatory safety certifications.",
-    icon: "CheckCircle2",
   },
 ] as const;
 

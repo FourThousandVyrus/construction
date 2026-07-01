@@ -36,7 +36,7 @@ export default async function DivisionPage({ params }: { params: Promise<{ id: s
                 lines={[[division.title], [{ key: "solutions", node: <span className="text-[var(--accent)]">Solutions.</span> }]]}
               />
               <p className="mt-8 max-w-xl text-xl leading-relaxed text-white/60">
-                {division.description} Epicshield Infrastructure delivers world-class healthcare infrastructure and turnkey clinical engineering for {division.title} projects.
+                {division.description} Epicshield Surfaces delivers world-class healthcare infrastructure and turnkey clinical engineering for {division.title} projects.
               </p>
               
               <div className="mt-12 flex flex-col gap-4 sm:flex-row">

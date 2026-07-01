@@ -57,7 +57,7 @@ export function SiteHeader() {
         <nav className="hidden items-center gap-8 md:flex">
           {navItems.map((item) =>
             item.label === "Services" ? (
-              <div key={item.href} className="relative group">
+              <div key={item.href} className="relative group focus-within:z-50">
                 <Link
                   href={item.href}
                   className={`relative flex items-center gap-1 text-[11px] font-bold uppercase tracking-[0.2em] transition-colors ${
@@ -72,7 +72,7 @@ export function SiteHeader() {
                     <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[var(--accent)]" />
                   )}
                 </Link>
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 rounded-2xl border border-gray-100 bg-white shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 rounded-2xl border border-gray-100 bg-white shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible focus-within:opacity-100 focus-within:visible transition-all duration-200 z-50">
                   <div className="py-3">
                     {servicesData.map((s) => (
                       <Link
@@ -144,7 +144,7 @@ export function SiteHeader() {
                   </button>
                 </div>
                 <div className="flex justify-center mb-10">
-                  <Image src="/epic-logo.png" alt={company.name} width={130} height={44} className="h-auto w-[130px] brightness-0 invert" priority />
+                  <Image src="/epic-logo.png" alt={company.name} width={130} height={44} className="h-auto w-[130px] brightness-0 invert" />
                 </div>
 
                 <nav className="flex flex-col gap-1">

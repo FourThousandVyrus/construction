@@ -1,5 +1,5 @@
 export const company = {
-  name: "Epicshield Infrastructure",
+  name: "Epicshield Surfaces",
   tagline: "Creating Spaces to Save Lives",
   founded: "January 23, 2024",
   founder: "Joshua Cobbinah",
@@ -11,7 +11,7 @@ export const company = {
 
 export const profile = {
   summary:
-    "Founded on January 23, 2024, by Joshua Cobbinah, Epicshield Infrastructure is a dedicated leader in private healthcare and hospital construction. Headquartered in Ghana, we exist with one mission: to transform healthcare infrastructure by creating modern, sustainable, and patient-focused healthcare facilities that save lives and elevate medical care.",
+    "Founded on January 23, 2024, by Joshua Cobbinah, Epicshield Surfaces is a dedicated leader in private healthcare and hospital construction. Headquartered in Ghana, we exist with one mission: to transform healthcare infrastructure by creating modern, sustainable, and patient-focused healthcare facilities that save lives and elevate medical care.",
   focus:
     "Unlike general contractors, we are exclusively committed to private healthcare & hospital construction. This sharp focus allows us to deliver unmatched expertise in design, engineering, project management, consultancy, and advanced hospital installations, tailored to the unique needs of healthcare providers and patients.",
   approach:
